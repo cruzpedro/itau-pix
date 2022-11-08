@@ -1,0 +1,9 @@
+com/itau/pix/resource/pixkey/mapper/PixKeyDTOMapperImpl.class
+com/itau/pix/resource/pixkey/PixKeyResource.class
+com/itau/pix/resource/pixkey/request/PixKeyCreateRequest.class
+com/itau/pix/handler/payload/ApiError.class
+com/itau/pix/resource/pixkey/request/PixKeyCreateRequest$PixKeyCreateRequestBuilder.class
+com/itau/pix/handler/CustomRestExceptionHandler.class
+com/itau/pix/resource/pixkey/mapper/PixKeyDTOMapper.class
+com/itau/pix/PixApiApplication.class
+com/itau/pix/handler/payload/ApiError$ApiErrorBuilder.class

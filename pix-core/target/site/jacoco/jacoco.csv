@@ -1,0 +1,15 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+pix-core,com.itau.pix.strategy.customer,CustomerStrategyFactory,4,37,1,2,0,7,1,4,0,3
+pix-core,com.itau.pix.strategy.customer,CustomerType,0,15,0,0,0,2,0,1,0,1
+pix-core,com.itau.pix.strategy.customer,CustomerPJStrategy,0,16,0,0,0,5,0,3,0,3
+pix-core,com.itau.pix.strategy.customer,CustomerPFStrategy,0,16,0,0,0,5,0,3,0,3
+pix-core,com.itau.pix.strategy.customer,CustomerTemplate,15,105,3,5,3,20,3,5,0,4
+pix-core,com.itau.pix.exception,PixException,0,3,0,0,0,1,0,1,0,1
+pix-core,com.itau.pix.exception,PixValidationException,0,4,0,0,0,2,0,1,0,1
+pix-core,com.itau.pix.service.impl,PixKeyServiceImpl,118,151,6,0,17,21,5,6,2,6
+pix-core,com.itau.pix.strategy.key,CelularStrategy,0,17,1,3,0,3,1,4,0,3
+pix-core,com.itau.pix.strategy.key,CnpjStrategy,0,23,0,0,0,7,0,3,0,3
+pix-core,com.itau.pix.strategy.key,AleatorioStrategy,0,17,1,3,0,3,1,4,0,3
+pix-core,com.itau.pix.strategy.key,KeyStrategyFactory,0,26,0,0,0,5,0,3,0,3
+pix-core,com.itau.pix.strategy.key,EmailStrategy,0,17,0,4,0,3,0,5,0,3
+pix-core,com.itau.pix.strategy.key,CpfStrategy,0,23,0,0,0,7,0,3,0,3

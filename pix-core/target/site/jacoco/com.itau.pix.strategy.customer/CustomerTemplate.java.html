@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerTemplate.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pix-core</a> &gt; <a href="index.source.html" class="el_package">com.itau.pix.strategy.customer</a> &gt; <span class="el_source">CustomerTemplate.java</span></div><h1>CustomerTemplate.java</h1><pre class="source lang-java linenums">package com.itau.pix.strategy.customer;
+
+import com.itau.pix.dto.PixKeyDTO;
+import com.itau.pix.entity.PixKey;
+import com.itau.pix.exception.PixValidationException;
+import com.itau.pix.mapper.PixKeyMapper;
+import com.itau.pix.repository.PixKeyRepository;
+import com.itau.pix.strategy.key.KeyStrategy;
+import com.itau.pix.strategy.key.KeyStrategyFactory;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
+<span class="fc" id="L14">@Slf4j</span>
+public abstract class CustomerTemplate {
+
+    protected final PixKeyRepository pixKeyRepository;
+    protected final KeyStrategyFactory keyStrategyFactory;
+    protected final PixKeyMapper pixKeyMapper;
+
+<span class="fc" id="L21">    protected CustomerTemplate(PixKeyRepository pixKeyRepository, KeyStrategyFactory keyStrategyFactory, PixKeyMapper pixKeyMapper) {</span>
+<span class="fc" id="L22">        this.pixKeyRepository = pixKeyRepository;</span>
+<span class="fc" id="L23">        this.keyStrategyFactory = keyStrategyFactory;</span>
+<span class="fc" id="L24">        this.pixKeyMapper = pixKeyMapper;</span>
+<span class="fc" id="L25">    }</span>
+
+    protected void validate(PixKeyDTO pixKeyDTO, int maxRecords) {
+<span class="fc" id="L28">        final List&lt;PixKey&gt; pixKeys = pixKeyRepository.findByAgencyAndAccount(pixKeyDTO.getAgency(), pixKeyDTO.getAccount());</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        if (pixKeys.size() &gt;= maxRecords) {</span>
+<span class="nc" id="L30">            throw new PixValidationException(&quot;Conta já possui o número máximo de chaves&quot;);</span>
+        }
+
+<span class="fc" id="L33">        final KeyStrategy strategy = keyStrategyFactory.findStrategy(pixKeyDTO.getType());</span>
+<span class="fc" id="L34">        final boolean valid = strategy.isValid(pixKeyDTO.getKey());</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (!valid) {</span>
+<span class="fc" id="L36">            throw new PixValidationException(String.format(&quot;Não é um valor válido para chave do tipo %s&quot;, pixKeyDTO.getType()));</span>
+        }
+
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        if (pixKeyDTO.getAgency() &gt; 9999) {</span>
+<span class="nc" id="L40">            throw new PixValidationException(&quot;Não é um valor válido para o campo agência&quot;);</span>
+        }
+
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">        if (pixKeyDTO.getAccount() &gt; 99999999) {</span>
+<span class="nc" id="L44">            throw new PixValidationException(&quot;Não é um valor válido para o campo conta&quot;);</span>
+        }
+<span class="fc" id="L46">    }</span>
+
+    protected PixKey save(PixKeyDTO pixKeyDTO) {
+        try {
+<span class="fc" id="L50">            final PixKey pixKey = pixKeyMapper.toEntity(pixKeyDTO);</span>
+<span class="fc" id="L51">            return pixKeyRepository.save(pixKey);</span>
+<span class="fc" id="L52">        } catch (Exception e) {</span>
+<span class="fc" id="L53">            log.error(&quot;C={}, M=create pixKeyDTO={}, message={}, e={}&quot;, getClass().getSimpleName(), pixKeyDTO, e.getMessage(), e);</span>
+<span class="fc" id="L54">            throw e;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

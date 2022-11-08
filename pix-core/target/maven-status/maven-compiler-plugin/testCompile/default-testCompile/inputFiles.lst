@@ -1,0 +1,12 @@
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/CnpjStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/dto/CnpjDtoTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/customer/CustomerCnpjStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/KeyStrategyFactoryTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/EmailStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/customer/CustomerStrategyFactoryTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/CpfStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/service/PixKeyServiceTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/customer/CustomerPFStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/dto/CpfDtoTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/AleatorioStrategyTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-core/src/test/java/com/itau/pix/strategy/key/CelularStrategyTest.java

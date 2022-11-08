@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerStrategyFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pix-core</a> &gt; <a href="index.source.html" class="el_package">com.itau.pix.strategy.customer</a> &gt; <span class="el_source">CustomerStrategyFactory.java</span></div><h1>CustomerStrategyFactory.java</h1><pre class="source lang-java linenums">package com.itau.pix.strategy.customer;
+
+import com.itau.pix.entity.KeyType;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+@Component
+public class CustomerStrategyFactory {
+
+    private final Map&lt;CustomerType, CustomerStrategy&gt; strategies;
+
+<span class="fc" id="L15">    public CustomerStrategyFactory(Set&lt;CustomerStrategy&gt; strategySet) {</span>
+<span class="fc" id="L16">        strategies = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L17">        strategySet.forEach(strategy -&gt; strategies.put(strategy.getType(), strategy));</span>
+<span class="fc" id="L18">    }</span>
+
+    public CustomerStrategy findStrategy(KeyType keyType) {
+<span class="pc bpc" id="L21" title="1 of 3 branches missed.">        return switch (keyType) {</span>
+<span class="fc" id="L22">            case CNPJ -&gt; strategies.get(CustomerType.PJ);</span>
+<span class="fc" id="L23">            case CPF, EMAIL, CELULAR, ALEATORIO -&gt;  strategies.get(CustomerType.PF);</span>
+        };
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

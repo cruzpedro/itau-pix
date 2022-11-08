@@ -1,0 +1,7 @@
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/dto/PixKeyRequestTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/HttpRequest.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/config/PostgresSetupConfig.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/steps/StepDefinition.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/CucumberIntegrationTest.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/SpringBootContextInitializer.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/test/java/com/itau/pix/SpringIntegrationTest.java

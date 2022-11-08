@@ -1,0 +1,12 @@
+com/itau/pix/strategy/key/CnpjStrategyTest.class
+com/itau/pix/strategy/key/AleatorioStrategyTest.class
+com/itau/pix/strategy/key/CpfStrategyTest.class
+com/itau/pix/dto/CnpjDtoTest.class
+com/itau/pix/service/PixKeyServiceTest.class
+com/itau/pix/strategy/customer/CustomerPFStrategyTest.class
+com/itau/pix/dto/CpfDtoTest.class
+com/itau/pix/strategy/key/KeyStrategyFactoryTest.class
+com/itau/pix/strategy/customer/CustomerCnpjStrategyTest.class
+com/itau/pix/strategy/customer/CustomerStrategyFactoryTest.class
+com/itau/pix/strategy/key/CelularStrategyTest.class
+com/itau/pix/strategy/key/EmailStrategyTest.class

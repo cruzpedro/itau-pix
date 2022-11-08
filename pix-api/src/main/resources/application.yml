@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    group:
+      test:
+        - "core"
+        - "core-test"
+      default:
+        - "core"
+        - "core-default"
+      qa:
+        - "core"
+        - "core-qa"
+      prod:
+        - "core"
+        - "core-prod"
+  application:
+    name: pix-api

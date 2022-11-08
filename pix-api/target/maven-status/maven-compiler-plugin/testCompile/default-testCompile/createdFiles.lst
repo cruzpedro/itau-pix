@@ -1,0 +1,8 @@
+com/itau/pix/CucumberIntegrationTest.class
+com/itau/pix/SpringBootContextInitializer.class
+com/itau/pix/config/PostgresSetupConfig.class
+com/itau/pix/steps/StepDefinition.class
+com/itau/pix/SpringIntegrationTest.class
+com/itau/pix/HttpRequest.class
+com/itau/pix/dto/PixKeyRequestTest$PixKeyRequestTestBuilder.class
+com/itau/pix/dto/PixKeyRequestTest.class

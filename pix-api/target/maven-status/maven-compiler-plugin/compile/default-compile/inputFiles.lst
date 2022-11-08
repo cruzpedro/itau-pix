@@ -1,0 +1,6 @@
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/resource/pixkey/request/PixKeyCreateRequest.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/handler/CustomRestExceptionHandler.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/handler/payload/ApiError.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/PixApiApplication.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/resource/pixkey/mapper/PixKeyDTOMapper.java
+/home/pedrocruz/git-repo/itau-pix/pix-api/src/main/java/com/itau/pix/resource/pixkey/PixKeyResource.java

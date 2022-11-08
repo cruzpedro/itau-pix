@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pixdb_test
+    username: postgres
+    password: postgres_test
